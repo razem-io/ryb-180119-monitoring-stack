@@ -6,3 +6,13 @@ services:
    - ./data/influxdb/data:/var/lib/influxdb
   ports:
    - 127.0.0.1:8086:8086
+
+ jenkins:
+  image: jenkins/jenkins:2.101-alpine
+  depends_on:
+   - influxdb
+  volumes:
+   - ./data/jenkins/data:/var/jenkins_home
+  ports:
+   - 127.0.0.1:8080:8080
+   - 127.0.0.1:50000:50000

@@ -22,6 +22,7 @@ echo
 echo
 
 mkdir -p ./data/influxdb/data
+mkdir -p ./data/jenkins/data
 
 branch=$(git symbolic-ref --short -q HEAD)
 echo Init of $branch done! 
