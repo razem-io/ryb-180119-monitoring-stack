@@ -29,3 +29,10 @@ services:
    - ./data/grafana/data:/var/lib/grafana
   ports:
    - 127.0.0.1:3000:3000
+
+ telegraf:
+  image: telegraf:1.5.1
+  depends_on:
+   - influxdb
+  volumes:
+   - ./data/telegraf/conf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
