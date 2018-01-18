@@ -2,3 +2,7 @@
 ./data/jenkins
 ./data/grafana
 ./data/telegraf
+build/
+.gradle/
+.idea/
+*.iml
